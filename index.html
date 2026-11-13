@@ -35,6 +35,13 @@ header .esp { flex:1; }
 .intro { text-align:center; padding:18px 16px 4px; }
 .intro h2 { font-family:Georgia,serif; color:var(--v); margin:0 0 6px; font-size:26px; }
 .intro p { margin:0 auto; max-width:640px; font-size:15px; }
+.faixa { display:flex; align-items:center; gap:22px; max-width:1100px; margin:14px auto 4px; padding:16px 26px;
+         background:radial-gradient(ellipse at 20% 40%, #B30F2A, #7A0A1C 70%); border-radius:16px; color:#FFF4DE;
+         box-shadow:0 6px 18px rgba(80,10,20,.18); }
+.faixa img { width:190px; height:auto; flex:none; filter:drop-shadow(0 3px 8px rgba(0,0,0,.35)); }
+.faixa h3 { font-family:Georgia,serif; color:#F7DE9C; margin:0 0 6px; font-size:22px; }
+.faixa p { margin:0; font-size:15px; line-height:1.45; }
+.faixa b { color:#F7DE9C; }
 main { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(270px,100%),1fr)); gap:16px; padding:16px; max-width:1200px; margin:0 auto; }
 .card { background:#fff; border:1px solid var(--b); border-radius:14px; overflow:hidden; display:flex; flex-direction:column;
         box-shadow:0 2px 8px rgba(80,20,10,.10); }
@@ -84,6 +91,7 @@ footer { text-align:center; font-size:13px; color:#7a6450; padding:10px 16px 90p
 @media (max-width: 520px) {
   header { padding:8px 10px; gap:8px; } header h1 { font-size:17px; } header small { display:none; }
   header .logo { font-size:24px; } .btcar { padding:8px 11px; font-size:14px; }
+  .faixa { flex-direction:column; text-align:center; margin:10px; padding:14px; gap:10px; } .faixa img { width:150px; }
   .intro h2 { font-size:21px; } main { padding:10px; gap:12px; }
 }
 html, body { overflow-x:hidden; }
@@ -93,6 +101,8 @@ html, body { overflow-x:hidden; }
 <div class="esp"></div><button class="btcar" onclick="abrir(true)">🛒 Carrinho <b id="n">0</b></button></header>
 <section class="intro"><h2>Presentes que deixam o Natal mais especial</h2>
 <p>Escolha as peças, personalize com nome ou frase e mande o pedido pelo WhatsApp. Todas são feitas sob encomenda.</p></section>
+<section class="faixa"><img src="img/natal_coite_logo.png" alt="Natal Coité" loading="lazy">
+<div><h3>Linha Natal Coité 2026</h3><p>Peças com a nossa Igreja Matriz e o tema do Natal Coité deste ano. Em cada produto, escolha o tema <b>Natal Coité 2026</b> ou <b>Natal Clássico</b>.</p></div></section>
 <main id="vitrine"></main>
 <footer>Sigma Lab 3D · Conceição do Coité – BA · Pedidos pelo WhatsApp · <a href="https://www.instagram.com/sigmalab3d/" target="_blank" rel="noopener" style="color:#A50F27;font-weight:700">@sigmalab3d</a></footer>
 <button class="btcar flutua" onclick="abrir(true)">🛒 Ver carrinho <b id="n2">0</b></button>
