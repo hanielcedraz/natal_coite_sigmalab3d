@@ -61,7 +61,8 @@ main { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(270px,100
 .consulta { max-width:640px; margin:12px auto 0; background:#FBF4E6; border:1px solid #EAD9B8; border-radius:14px;
             padding:12px 18px; font-size:14.5px; line-height:1.5; color:#5a4636; }
 .consulta b { color:var(--v); }
-.consulta a { display:inline-block; margin-top:4px; font-weight:700; color:#1E8E4A; text-decoration:none; }
+.consulta .outro { display:inline-block; margin-top:6px; }
+.consulta a { display:inline-block; margin-top:6px; margin-left:4px; font-weight:700; color:#1E8E4A; text-decoration:none; }
 .consulta a:hover { text-decoration:underline; }
 label { font-size:12.5px; font-weight:600; color:#5a4636; display:block; margin-bottom:2px; }
 select, input[type=text], textarea { width:100%; padding:8px 9px; border:1px solid #DCCBB0; border-radius:8px; font-size:15px;
@@ -106,9 +107,11 @@ html, body { overflow-x:hidden; }
 <div class="esp"></div><button class="btcar" onclick="abrir(true)">🛒 Carrinho <b id="n">0</b></button></header>
 <section class="intro"><h2>Presentes que deixam o Natal mais especial</h2>
 <p>Escolha as peças, personalize com nome ou frase e mande o pedido pelo WhatsApp. Todas são feitas sob encomenda.</p>
-<div class="consulta">💛 <b>Cada peça nasce do seu jeitinho</b>: com o seu nome, a sua frase, as suas cores.
-Por isso o preço a gente combina numa conversa boa, sem pressa. Chama a gente no WhatsApp, vai ser um prazer te atender!<br>
-<a href="https://wa.me/5575992067303?text=Ol%C3%A1%21%20Vi%20a%20loja%20de%20Natal%20e%20queria%20saber%20o%20pre%C3%A7o%20das%20pe%C3%A7as." target="_blank" rel="noopener">Conversar no WhatsApp →</a></div></section>
+<div class="consulta">💛 <b>Cada peça nasce do seu jeitinho</b>, por isso o preço a gente combina numa conversa.
+É simples: escolha as peças, coloque no carrinho e toque em <b>Finalizar pelo WhatsApp</b>. A mensagem já chega pra gente
+com tudo o que você escolheu, e a gente te responde com o valor e o prazo, com todo o carinho.<br>
+<span class="outro">Sonhou com algo diferente do que está aqui?</span>
+<a href="https://wa.me/5575992067303?text=Ol%C3%A1%21%20Vi%20a%20loja%20de%20Natal%20e%20queria%20uma%20pe%C3%A7a%20personalizada%20diferente.%20Minha%20ideia%20%C3%A9%3A%20" target="_blank" rel="noopener">Conte os detalhes pra gente no WhatsApp →</a></div></section>
 <section class="faixa"><img src="img/natal_coite_logo.png" alt="Natal Coité" loading="lazy">
 <div><h3>Linha Natal Coité 2026</h3><p>Peças com a nossa Igreja Matriz e o tema do Natal Coité deste ano. Em cada produto, escolha o tema <b>Natal Coité 2026</b> ou <b>Natal Clássico</b>.</p></div></section>
 <main id="vitrine"></main>
@@ -234,6 +237,7 @@ function enviar() {
   if (t) m += `\n*Total dos itens com preço: ${R$(t)}*\n`;
   if (obs) m += `\nObservações: ${obs}\n`;
   if (cli) m += `\nNome: ${cli}`;
+  m += `\n\nPode me passar o valor e o prazo? 😊`;
   window.open(`https://wa.me/${D.whats}?text=${encodeURIComponent(m)}`, "_blank");
 }
 vitrine(); desenha();
